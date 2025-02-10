@@ -85,12 +85,15 @@ def verify_transaction(ref_number: str):
         raise Exception(res.text)
     data = res.json()
 
-    _status = data['Success']
-    _result_code = data.get('ResultCode', None)
-    if not _result_code:
+    if not isinstance(data, dict):
+        return False, f"Response is not a dictionary.({type(data)})"
+
+    if "ResultCode" not in data:
         return False, 'Could not find result code in response.'
 
-    if _status and _result_code == 0:
+    _result_code = data['ResultCode']
+
+    if _result_code == 0:
         return True, None
     else:
         if _result_code == -2:
@@ -136,12 +139,15 @@ def reverse_transaction(ref_number: str):
         raise Exception(res.text)
     data = res.json()
 
-    _status = data['Success']
-    _result_code = data.get('ResultCode', None)
-    if not _result_code:
+    if not isinstance(data, dict):
+        return False, f"Response is not a dictionary.({type(data)})"
+
+    if "ResultCode" not in data:
         return False, 'Could not find result code in response.'
 
-    if _status and _result_code == 0:
+    _result_code = data['ResultCode']
+
+    if _result_code == 0:
         return True, None
     else:
         if _result_code == 2:

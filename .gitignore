@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+.env/
+
+# PyInstaller
+*.spec
+
+# Logs and database files
+*.log
+*.sqlite3
+
+# Unit test / coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# IDEs and editors
+.vscode/
+.idea/
+*.iml
+
+# Pipenv
+Pipfile
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# mypy
+.mypy_cache/
+
+# pyenv
+.python-version
+
+# PEP 582 (used by e.g. poetry)
+__pypackages__/
+
+# pytest
+.pytest_cache/
+
+# tox
+.tox/
+
+# coverage
+.coverage
+.cache
+
+# local environment config
+.envrc
+
+# Sphinx documentation
+/docs/_build/
+
+# wheel archives
+*.whl
+
+# Editable installs
+*.egg-info/
+*.eggs/
+
+# Security / secrets
+.env
+env/
+secrets.json
